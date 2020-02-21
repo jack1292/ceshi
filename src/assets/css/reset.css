@@ -1,0 +1,321 @@
+@charset "utf-8";
+html {
+    background-color: #fff;
+    color: #000;
+    font-size: 14px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input, textarea, button, select, pre, xmp, tt, code, kbd, samp {
+    line-height: 1.5;
+    font-family: "微软雅黑";
+}
+
+h1, h2, h3, h4, h5, h6, small, big, input, textarea, button, select {
+    font-size: 100%
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "微软雅黑";
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: normal
+}
+
+address, cite, dfn, em, i, optgroup, var {
+    font-style: normal
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left
+}
+
+caption, th {
+    text-align: inherit
+}
+
+ul, ol, menu {
+    list-style: none
+}
+
+fieldset, img {
+    border: 0
+}
+
+img, object, input, textarea, button, select {
+    vertical-align: middle
+}
+
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: 0;
+}
+
+textarea.el-textarea__inner {
+    resize: none !important;
+}
+
+input, select, button {
+    margin: 0;
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: middle;
+    background: transparent;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+article, aside, footer, header, section, nav, figure, figcaption, hgroup, details, menu {
+    display: block
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "\0020"
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical
+}
+
+input, textarea, button, select, a {
+    outline: 0 none;
+    border: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+mark {
+    background-color: transparent
+}
+
+a, ins, s, u, del {
+    text-decoration: none
+}
+
+sup, sub {
+    vertical-align: baseline
+}
+
+html {
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "Microsoft Yahei", "微软雅黑", Arial;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+    background: #fff;
+    -webkit-text-size-adjust: none;
+}
+
+
+
+/*溢出隐藏*/
+.ovDna {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ovDuo2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.ovDuo3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.detail-content{
+    line-height: 28px !important;
+    font-size: 14px!important;
+
+}
+.detail-content img{
+    display: block!important;
+    max-width: 100% !important;
+    height: auto!important;
+}
+.item3 .van-field__body{
+    height: auto;
+}
+.item3 .van-hairline--top-bottom::after, .item3 .van-hairline-unset--top-bottom::after{
+    border: 0;
+}
+.from-box .van-field__body{
+    height: 24px;
+}
+.index-top .van-field__body{
+    height: 26px;
+}
+.login input.van-field__control::-webkit-input-placeholder {
+    color: #fff!important;
+}
+.login input.van-field__control{
+    color: #fff;
+}
+.login .van-cell{
+    border: 1px solid #fff;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.header-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 1px solid #f3f3f3;
+    background: #fff;
+    z-index: 99;
+
+}
+.header-top span{
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    z-index: 9;
+
+}
+.header-top i{
+    font-size: 24px;
+}
+.header-top>div{
+    flex: 1;
+    text-align: center;
+    margin-left: -48px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.user-box{
+    padding-top: 48px;
+}
+.quill,.quill-editor{
+    width: 100%;
+    /*border-top: 1px solid #ccc;*/
+}
+.ql-toolbar{
+    display: none;
+}
+.fuwenben .ql-toolbar{
+    display: block;
+}
+.quill-editor{
+    height: 300px!important;
+}
+.znx-detail{
+    line-height: 40px!important;
+
+}
+.znx-detail>a{
+    display: block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #71adde;
+    color: #fff;
+    border-radius: 5px;
+}
+.znx-detail div{
+    margin: 0!important;
+    display: block!important;
+    float: none!important;
+    width: 100% !important;
+}
+.set-box .van-cell:not(:last-child)::after{
+    border-bottom: 0;
+}
+.ql-editor.ql-blank::before{
+    font-style:normal!important;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow{
+    border-top: 1px solid #ccc!important;
+}
+/*.search-box .van-search__content{*/
+/*    background: #8cddff;*/
+/*}*/
+.up-box .van-uploader{
+    width: 100% !important;
+
+}
+.up-box .van-uploader__upload{
+    width: 100% !important;
+    height: 50px!important;
+    margin: 0;
+}
+.up-box .van-uploader__preview{
+    margin: 0;
+}
+.up-box .van-uploader__preview-image{
+    width: 100%;
+    height: auto;
+}
+.up-box  .van-uploader__preview-delete{
+    font-size: 24px;
+    display: none;
+}
+.share-box{
+    background: transparent;
+}
+.share-box-text{
+    width: 100vw;
+    padding-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+.share-box-text img{
+    float: right;
+    width: 100px;
+
+}
+.share-box-text p{
+    float: left;
+    width: 100%;
+    padding: 20px 30px;
+    line-height: 36px;
+    font-size: 24px;
+}
