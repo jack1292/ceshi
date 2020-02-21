@@ -1,152 +1,124 @@
 import vue from 'vue'
 import axios from './axios'
-import apiOrg from './org'
-import apiMember from './member'
-import apiLogin from './login'
+
 
 // 全局接口
 const apiContent = {
-  // 获取可选择的地区
-  region: (data) => {
-    return axios('/phone/index/getCheckedCategoryDistrict', data)
-  },
-  //  获取类型
-  classification: (data) => {
-    return axios('/phone/index/classification', data)
-  },
-  //  获取轮播图
-  //  获取首页职位列表
-  listJob: (data) => {
-    return axios('/phone/index/listJob', data)
-  },
-  //  新闻资讯列表
-  getNewList: (data) => {
-    return axios('/phone/Index/listNews', data)
-  },
-  //  新闻资讯详情
-  newsDetail: (data) => {
-    return axios('/phone/Index/showNews', data)
-  },
-  // 职位详情
-  showJob: (data) => {
-    return axios('/phone/index/showJob', data)
-  },
-  // 机构详情
-  showOrg: (data) => {
-    return axios('/phone/Organization/jigousel', data)
-  },
-  organizationInfo: (data) => {
-    return axios('/phone/index/organizationInfo', data)
-  },
-  // 机构在招职位
-  orgPosition: (data) => {
-    return axios('/phone/Organization/zhiweilist', data)
-  },
-  //  动态列表
-  listDynamicNews: (data) => {
-    return axios('/phone/index/listDynamicNews', data)
-  },
-  //  发布动态
-  addDynamicNews: (data) => {
-    return axios('/phone/index/addDynamicNews', data)
-  },
-  // 动态点赞、或者踩
-  zanORCaiDynamicNews: (data) => {
-    return axios('/phone/index/zanORCaiDynamicNews', data)
-  },
-  // 动态新闻详情
-  showDynamicNews: (data) => {
-    return axios('/phone/index/showDynamicNews', data)
-  },
-  // 站内信列表
-  inside: (data) => {
-    return axios('/phone/index/inside', data)
-  },
-  // 站内信详情
-  insidecont: (data) => {
-    return axios('/phone/index/insidecont', data)
-  },
-  // 站内信详情2
-  insidecont2: (data) => {
-    return axios('/phone/index/insideSendContent', data)
-  },
-  // 站内信回复
-  replyinside: (data) => {
-    return axios('/phone/index/replyinside', data)
-  },
-  //  我发的站内信
-  mypostZnx: (data) => {
-    return axios('/phone/index/insideSend', data)
-  },
-  //  分享
-  wxConfig: (data) => {
-    return axios('/phone/Common/shareContent', data)
-  },
-  // 轮播
+  // 获取首页轮播
   listAdPhone: (data) => {
-    return axios('/phone/index/listAdPhone', data)
+    return axios('/Home/Index/getFocus', data)
   },
-  getInsideLettersNoReadCount: (data) => {
-    return axios('/phone/index/getInsideLettersNoReadCount', data)
+  //  首页风采
+  getFengcai: (data) => {
+    return axios('/Home/Index/getFengcai', data)
   },
-  //  获取用户openid
-  getUserOpenId: (data) => {
-    return axios('/phone/Account/getUserOpenId', data)
+  //  风格体验吧列表
+  FengeList: (data) => {
+    return axios('/Home/Style/getList', data)
   },
-  //  获取推荐的人
-  recommendCandidateList: (data) => {
-    return axios('/phone/Connectpeople/recommendCandidateList', data)
+  //  风格体验吧详情
+  fgDetail: (data) => {
+    return axios('/Home/Style/detail', data)
   },
-  recommendOrgList: (data) => {
-    return axios('/phone/Connectpeople/recommendOrgList', data)
+  //  登录
+  login: (data) => {
+    return axios('/Home/User/login', data)
   },
-  //  获取添加好友列表
-  applyAddFriendList: (data) => {
-    return axios('/index/Wangyi/applyAddFriendList', data)
+  //  注册
+  regiser: (data) => {
+    return axios('/Home/User/signup', data)
   },
-  addFriend: (data) => {
-    return axios('/index/Wangyi/addFriend', data)
+  //  获取验证码
+  getCode: (data) => {
+    return axios('/Home/Index/sms_send', data)
   },
-  //  判断俩人是否是好友
-  checkFriend: (data) => {
-    return axios('/index/Wangyi/checkFriend', data)
+  //  获取个人信息
+  getUserInfo: (data) => {
+    return axios('/Home/User/getInfo', data)
   },
-  applyAddFriend: (data) => {
-    return axios('/index/Wangyi/applyAddFriend', data)
+  //  上传头像
+  upload: (data) => {
+    return axios('/Home/Img/upload', data,'post', false)
   },
-  //  获取会员套餐
-  getSetMealList:(data) => {
-    return axios('/index/Vip/getSetMealList',data)
+  //  设置个人信息
+  setInfo: (data) => {
+    return axios('/Home/User/setInfo', data)
   },
-  //  获取会员信息
-  getUserVipInfo:(data) => {
-    return axios('/index/Vip/getUserVipInfo',data)
+  //  修改手机号
+  setPhone: (data) => {
+    return axios('/Home/User/setPhone', data)
   },
-  //  购买会员 微信
-  buySetMealWechat:(data) => {
-    return axios('/index/Vip/buySetMealWechat',data)
+  //  解绑微信
+  unbindWx: (data) => {
+    return axios('/Home/User/unbindWx', data)
   },
-  //  购买会员 对公转
-  transferResultVip:(data) => {
-    return axios('/index/Vip/transferResultVip',data)
+  //  我的账单
+  money_log: (data) => {
+    return axios('/Home/User/money_log', data)
   },
-  //  微信支付获取openid
-  WechatRechargeOrgPhone:(data) => {
-    return axios('/index/Vip/WechatRechargeOrgPhone',data)
+  //  我的预约单
+  myOrder: (data) => {
+    return axios('/Home/Order/myOrder', data)
   },
-  //  判断用户是否可发布动态
-  checkDynamicNewsAdd:(data) => {
-    return axios('/index/other/checkDynamicNewsAdd',data)
+  //  评价
+  pingjia: (data) => {
+    return axios('/Home/Order/pingjia', data)
   },
-  //  删除动态
-  delDynamicNews:(data) => {
-    return axios('/phone/index/delDynamicNews',data)
+  //  超市列表
+  supermarkeList: (data) => {
+    return axios('/Home/Company/getList', data)
+  },
+  //  机构详情
+  orgDetail: (data) => {
+    return axios('/Home/Company/detail', data)
+  },
+  //  公司案例
+  anli: (data) => {
+    return axios('/Home/Company/anli', data)
+  },
+  //  设计师列表
+  sheji: (data) => {
+    return axios('/Home/Company/sheji', data)
+  },
+  //  用户评价
+  getPingjia: (data) => {
+    return axios('/Home/Company/getPingjia', data)
+  },
+  //  加入预约
+  addCart: (data) => {
+    return axios('/Home/Order/addCart', data)
+  },
+  //  案例详情
+  anli_detail: (data) => {
+    return axios('/Home/Company/anli_detail', data)
+  },
+  // 设计师详情
+  sheji_detial: (data) => {
+    return axios('/Home/Company/sheji_detial', data)
+  },
+  //  设计师案例
+  sheji_anli: (data) => {
+    return axios('/Home/Company/sheji_anli', data)
+  },
+  //  购物车列表
+  OrderList: (data) => {
+    return axios('/Home/Order/getList', data)
+  },
+  //  获取价钱
+  preOrder: (data) => {
+    return axios('/Home/Order/preOrder', data)
+  },
+  //  添加订单
+  addOrder: (data) => {
+    return axios('/Home/Order/addOrder', data)
+  },
+  //  进入超市判断
+  isVisit: (data) => {
+    return axios('/Home/User/isVisit', data)
   },
 }
 const api = {
   apiContent,
-  apiOrg,
-  apiMember,
-  apiLogin
+
 }
 vue.prototype.$api = api
